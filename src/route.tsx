@@ -6,6 +6,10 @@ import {
   UsePrivateInfiniteQuery,
   WebSocketPublicTopic,
   WebSocketPrivateTopic,
+  UseChains,
+  UseOrderbookStream,
+  UseMarketsStream,
+  UseMarketTradeStream,
 } from './Hooks';
 
 export type THooks = {
@@ -15,8 +19,6 @@ export type THooks = {
 };
 
 export const routes: THooks[] = [
-  // {title: 'Orderly SDK', name: 'OrderlySDK', component: RouteButtons},
-  // {title: 'Wallet connect', name: 'WalletConnect', component: WalletConnect},
   {name: 'useAccount', component: UseAccount},
   {name: 'useQuery', component: UseQuery},
   {name: 'usePrivateQuery', component: UsePrivateQuery},
@@ -24,4 +26,8 @@ export const routes: THooks[] = [
   {name: 'UsePrivateInfiniteQuery', component: UsePrivateInfiniteQuery},
   {name: 'WebSocket PublicTopic', component: WebSocketPublicTopic},
   {name: 'WebSocket PrivateTopic', component: WebSocketPrivateTopic},
+  {name: 'useChains', component: UseChains},
+  {name: 'useOrderbookStream', component: UseOrderbookStream},
+  {name: 'useMarketsStream', component: UseMarketsStream},
+  {name: 'useMarketTradeStream', component: UseMarketTradeStream},
 ];

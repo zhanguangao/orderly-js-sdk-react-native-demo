@@ -5,7 +5,9 @@ export const UsePrivateQuery = () => {
   const {data, isLoading, error} = usePrivateQuery('/v1/client/info');
   const {state} = useAccount();
 
-  if (isLoading) return <Text>loading...</Text>;
+  if (isLoading) {
+    return <Text>Loading...</Text>;
+  }
 
   return (
     <ScrollView>

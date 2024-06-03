@@ -6,3 +6,7 @@ export {UsePrivateInfiniteQuery} from './api-requests/UsePrivateInfiniteQuery';
 
 export {WebSocketPublicTopic} from './websocket/PublicTopic';
 export {WebSocketPrivateTopic} from './websocket/PrivateTopic';
+export {UseChains} from './UseChains';
+export {UseOrderbookStream} from './UseOrderbookStream';
+export {UseMarketsStream} from './UseMarketsStream';
+export {UseMarketTradeStream} from './UseMarketTradeStream';
