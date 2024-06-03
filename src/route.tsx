@@ -1,4 +1,12 @@
-import {UseAccount, UseQuery} from './Hooks';
+import {
+  UseAccount,
+  UseQuery,
+  UsePrivateQuery,
+  UseMutation,
+  UsePrivateInfiniteQuery,
+  WebSocketPublicTopic,
+  WebSocketPrivateTopic,
+} from './Hooks';
 
 export type THooks = {
   title?: string;
@@ -11,4 +19,9 @@ export const routes: THooks[] = [
   // {title: 'Wallet connect', name: 'WalletConnect', component: WalletConnect},
   {name: 'useAccount', component: UseAccount},
   {name: 'useQuery', component: UseQuery},
+  {name: 'usePrivateQuery', component: UsePrivateQuery},
+  {name: 'useMutation', component: UseMutation},
+  {name: 'UsePrivateInfiniteQuery', component: UsePrivateInfiniteQuery},
+  {name: 'WebSocket PublicTopic', component: WebSocketPublicTopic},
+  {name: 'WebSocket PrivateTopic', component: WebSocketPrivateTopic},
 ];
