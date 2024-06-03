@@ -62,7 +62,7 @@ function initConfig() {
   });
 }
 
-export const ConnectProvider: React.FC<PropsWithChildren> = props => {
+export const Web3OnboardProvider: React.FC<PropsWithChildren> = props => {
   const [init, setinit] = useState(false);
 
   useEffect(() => {

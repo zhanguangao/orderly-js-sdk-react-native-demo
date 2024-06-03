@@ -10,7 +10,7 @@ import {AccountStatusEnum} from '@orderly.network/types';
 
 const WalletConnect: React.FC = () => {
   const {open} = useWeb3Modal();
-  const {address, chainId, isConnected} = useWeb3ModalAccount();
+  const {address = '', chainId, isConnected} = useWeb3ModalAccount();
   const {walletProvider} = useWeb3ModalProvider();
 
   const {

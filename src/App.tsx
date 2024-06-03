@@ -1,27 +1,33 @@
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {OrderlyProvider} from './OrderlyProvider';
+import HomePage from './HomePage';
+import {routes} from './route';
 
-import {SafeAreaView, StatusBar} from 'react-native';
-
-import {OrderlyConfigProvider} from '@orderly.network/hooks';
-import WalletConnect from './WalletConnect';
-import {ConnectProvider} from './ConnectProvider';
-import {KeyStore} from './keyStore/keyStore';
-
-const keyStore = new KeyStore();
+const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
   return (
-    <ConnectProvider>
-      <OrderlyConfigProvider
-        brokerId="orderly"
-        networkId="mainnet"
-        keyStore={keyStore}>
-        <SafeAreaView>
-          <StatusBar />
-          <WalletConnect />
-        </SafeAreaView>
-      </OrderlyConfigProvider>
-    </ConnectProvider>
+    <OrderlyProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="OrderlySDK"
+            component={HomePage}
+            options={{title: 'Orderly SDK'}}
+          />
+          {routes.map(route => (
+            <Stack.Screen
+              key={route.name}
+              name={route.name}
+              component={route.component}
+              options={{title: route.title || route.name}}
+            />
+          ))}
+        </Stack.Navigator>
+      </NavigationContainer>
+    </OrderlyProvider>
   );
 }
 
