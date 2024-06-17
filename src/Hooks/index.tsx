@@ -10,3 +10,4 @@ export {UseChains} from './UseChains';
 export {UseOrderbookStream} from './UseOrderbookStream';
 export {UseMarketsStream} from './UseMarketsStream';
 export {UseMarketTradeStream} from './UseMarketTradeStream';
+export {UseDeposit} from './UseDeposit';

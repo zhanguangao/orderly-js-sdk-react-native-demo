@@ -10,6 +10,7 @@ import {
   UseOrderbookStream,
   UseMarketsStream,
   UseMarketTradeStream,
+  UseDeposit,
 } from './Hooks';
 
 export type THooks = {
@@ -30,4 +31,5 @@ export const routes: THooks[] = [
   {name: 'useOrderbookStream', component: UseOrderbookStream},
   {name: 'useMarketsStream', component: UseMarketsStream},
   {name: 'useMarketTradeStream', component: UseMarketTradeStream},
+  {name: 'UseDeposit', component: UseDeposit},
 ];
