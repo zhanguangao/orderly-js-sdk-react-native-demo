@@ -13,5 +13,4 @@ export {UseMarketTradeStream} from './UseMarketTradeStream';
 export {UseDeposit} from './UseDeposit';
 export {UseWithdraw} from './UseWithdraw';
 export {UseOrderEntry} from './UseOrderEntry';
-
-
+export {UseOrderStream} from './UseOrderStream';

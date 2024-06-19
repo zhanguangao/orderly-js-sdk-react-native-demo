@@ -13,6 +13,7 @@ import {
   UseDeposit,
   UseWithdraw,
   UseOrderEntry,
+  UseOrderStream,
 } from './Hooks';
 
 export type THooks = {
@@ -36,4 +37,5 @@ export const routes: THooks[] = [
   {name: 'useDeposit', component: UseDeposit},
   {name: 'useWithdraw', component: UseWithdraw},
   {name: 'useOrderEntry', component: UseOrderEntry},
+  {name: 'useOrderStream', component: UseOrderStream},
 ];
